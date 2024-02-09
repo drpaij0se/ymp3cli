@@ -1,0 +1,13 @@
+.vscode/
+music/
+
+
+go.sum
+*.mp3
+.spotdl-cache
+main
+ymp3cli
+*.mp3
+*.exe
+*.zip
+
