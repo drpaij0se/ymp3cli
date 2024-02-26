@@ -16,7 +16,7 @@ type Respose struct {
 }
 
 func DefaultRpc(port int) {
-	err := client.Login("851297648111517697")
+	err := client.Login("1211479421081485313")
 	if err != nil {
 		fmt.Println("No discord detected")
 	}
@@ -42,20 +42,16 @@ func DefaultRpc(port int) {
 		song := "Listening " + r
 		var res Respose
 		json.Unmarshal([]byte(r), &res)
-		if res.Message == "Not Found" { // {"message":"Not Found"}
-			song = "Listening Nothing💀"
-		}
 		err = client.SetActivity(client.Activity{
 			State:      "🎵🖥️",
 			Details:    song,
 			LargeImage: "skull",
 			LargeText:  "🙏",
-			SmallImage: "wallpaperbetter_com_1366x768",
-			SmallText:  "yessir",
+			SmallImage: "https://cdn.discordapp.com/attachments/907631182240436305/1211480323817340938/640px-Kanye_West_at_the_2009_Tribeca_Film_Festival_28crop_229.png?ex=65ee59f9&is=65dbe4f9&hm=c9b9b1df4fd29814824c2b499aaec07d4ed2da1f213fe85fb6667f5a652ead24&",
 			Buttons: []*client.Button{
-				&client.Button{
+				{
 					Label: "GitHub",
-					Url:   "https://github.com/paij0se/ymp3cli",
+					Url:   "https://github.com/drpaij0se/ymp3cli",
 				},
 			},
 		})
